@@ -1,0 +1,78 @@
+{
+ "actions": [],
+ "autoname": "field:email_template_name",
+ "creation": "2024-01-15 19:05:56.945861",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "email_template_name",
+  "email_html_template",
+  "column_break_hlgd",
+  "image_1",
+  "image_2",
+  "image_3",
+  "image_4"
+ ],
+ "fields": [
+  {
+   "fieldname": "email_template_name",
+   "fieldtype": "Data",
+   "label": "Email template name",
+   "unique": 1
+  },
+  {
+   "fieldname": "email_html_template",
+   "fieldtype": "Code",
+   "label": "Email HTML template"
+  },
+  {
+   "fieldname": "column_break_hlgd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "image_1",
+   "fieldtype": "Attach Image",
+   "label": "image 1"
+  },
+  {
+   "fieldname": "image_2",
+   "fieldtype": "Attach Image",
+   "label": "image 2"
+  },
+  {
+   "fieldname": "image_3",
+   "fieldtype": "Attach Image",
+   "label": "image 3"
+  },
+  {
+   "fieldname": "image_4",
+   "fieldtype": "Attach Image",
+   "label": "image 4"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-16 10:56:02.635881",
+ "modified_by": "Administrator",
+ "module": "Mailing Service",
+ "name": "Mail Template",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

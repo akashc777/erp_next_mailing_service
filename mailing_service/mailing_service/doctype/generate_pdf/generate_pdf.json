@@ -1,0 +1,64 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-01-10 23:53:03.726426",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "generate_pdf_section",
+  "select_pdf_template",
+  "upload_csv",
+  "upload"
+ ],
+ "fields": [
+  {
+   "fieldname": "generate_pdf_section",
+   "fieldtype": "Section Break",
+   "label": "Generate PDF"
+  },
+  {
+   "fieldname": "select_pdf_template",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Select PDF template",
+   "options": "PDF Template",
+   "reqd": 1
+  },
+  {
+   "fetch_from": ".pdf_template_name",
+   "fieldname": "upload_csv",
+   "fieldtype": "Attach",
+   "label": "Upload CSV",
+   "reqd": 1
+  },
+  {
+   "fieldname": "upload",
+   "fieldtype": "Button",
+   "label": "upload"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-11 02:29:35.873950",
+ "modified_by": "Administrator",
+ "module": "Mailing Service",
+ "name": "Generate PDF",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

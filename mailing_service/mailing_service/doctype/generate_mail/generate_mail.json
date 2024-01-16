@@ -1,0 +1,86 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-01-15 19:23:28.020449",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "select_email_template",
+  "select_pdf_template",
+  "upload_csv",
+  "column_break_riih",
+  "row_num",
+  "get_email_preview",
+  "get_pdf_preview",
+  "send_mail"
+ ],
+ "fields": [
+  {
+   "fieldname": "select_email_template",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "select email template",
+   "options": "Mail Template",
+   "reqd": 1
+  },
+  {
+   "fieldname": "select_pdf_template",
+   "fieldtype": "Link",
+   "label": "select PDF template",
+   "options": "PDF Template"
+  },
+  {
+   "fieldname": "column_break_riih",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "send_mail",
+   "fieldtype": "Button",
+   "label": "Send mail"
+  },
+  {
+   "fieldname": "get_pdf_preview",
+   "fieldtype": "Button",
+   "label": "Get PDF preview"
+  },
+  {
+   "fieldname": "upload_csv",
+   "fieldtype": "Attach",
+   "label": "upload csv"
+  },
+  {
+   "fieldname": "row_num",
+   "fieldtype": "Int",
+   "label": "row num"
+  },
+  {
+   "fieldname": "get_email_preview",
+   "fieldtype": "Button",
+   "label": "Get email preview"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-16 12:53:28.457515",
+ "modified_by": "Administrator",
+ "module": "Mailing Service",
+ "name": "Generate Mail",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,94 @@
+{
+ "actions": [],
+ "autoname": "field:pdf_template_name",
+ "creation": "2024-01-08 19:20:56.933888",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "pdf_template_name",
+  "pdf_html_template",
+  "pdf_html_template_page_2",
+  "pdf_html_template_page_3",
+  "column_break_roqd",
+  "image_1",
+  "image_2",
+  "image_3",
+  "image_4"
+ ],
+ "fields": [
+  {
+   "fieldname": "pdf_template_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "PDF Template Name",
+   "length": 20,
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "pdf_html_template",
+   "fieldtype": "Code",
+   "label": "PDF HTML Template page 1",
+   "reqd": 1
+  },
+  {
+   "fieldname": "pdf_html_template_page_2",
+   "fieldtype": "Code",
+   "label": "PDF HTML Template page 2"
+  },
+  {
+   "fieldname": "pdf_html_template_page_3",
+   "fieldtype": "Code",
+   "label": "PDF HTML Template page 3"
+  },
+  {
+   "fieldname": "column_break_roqd",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "image_1",
+   "fieldtype": "Attach Image",
+   "label": "image 1"
+  },
+  {
+   "fieldname": "image_2",
+   "fieldtype": "Attach Image",
+   "label": "image 2"
+  },
+  {
+   "fieldname": "image_3",
+   "fieldtype": "Attach Image",
+   "label": "image 3"
+  },
+  {
+   "fieldname": "image_4",
+   "fieldtype": "Attach Image",
+   "label": "image 4"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-15 14:43:45.168540",
+ "modified_by": "Administrator",
+ "module": "Mailing Service",
+ "name": "PDF Template",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
