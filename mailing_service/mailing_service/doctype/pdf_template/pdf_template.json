@@ -7,8 +7,8 @@
  "field_order": [
   "pdf_template_name",
   "pdf_html_template",
-  "pdf_html_template_page_2",
-  "pdf_html_template_page_3",
+  "pdf_html_header",
+  "pdf_html_footer",
   "column_break_roqd",
   "image_1",
   "image_2",
@@ -26,20 +26,11 @@
    "unique": 1
   },
   {
+   "default": "\n\n    <style>\n        /* Add your CSS styles here */\n        .header {\n            text-align: center;\n            font-size: 12px;\n            color: #333;\n        }\n\n        .footer {\n            text-align: center;\n            font-size: 10px;\n            color: #666;\n        }\n    </style>\n\n\n    <!-- Header Section Start -->\n    <div class=\"header\">This is the header</div>\n    <!-- Header Section End -->\n    \n    <div class=\"content\">\n        <p>Hello, this is the main content of the PDF.</p>\n    </div>\n    \n    <!-- Footer Section Start -->\n    <div class=\"footer\">Page {{ page }} of {{ pages }}</div>\n    <!-- Footer Section End -->\n\n",
    "fieldname": "pdf_html_template",
    "fieldtype": "Code",
-   "label": "PDF HTML Template page 1",
+   "label": "PDF HTML Template",
    "reqd": 1
-  },
-  {
-   "fieldname": "pdf_html_template_page_2",
-   "fieldtype": "Code",
-   "label": "PDF HTML Template page 2"
-  },
-  {
-   "fieldname": "pdf_html_template_page_3",
-   "fieldtype": "Code",
-   "label": "PDF HTML Template page 3"
   },
   {
    "fieldname": "column_break_roqd",
@@ -64,11 +55,21 @@
    "fieldname": "image_4",
    "fieldtype": "Attach Image",
    "label": "image 4"
+  },
+  {
+   "fieldname": "pdf_html_header",
+   "fieldtype": "Code",
+   "label": "PDF HTML header"
+  },
+  {
+   "fieldname": "pdf_html_footer",
+   "fieldtype": "Code",
+   "label": "PDF HTML footer"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-15 14:43:45.168540",
+ "modified": "2024-01-25 03:48:30.708327",
  "modified_by": "Administrator",
  "module": "Mailing Service",
  "name": "PDF Template",

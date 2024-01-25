@@ -22,10 +22,10 @@ class GeneratePDF(Document):
 		file_image_3 = frappe.get_doc("File", {"file_url": html_template_data.image_3})
 		file_image_4 = frappe.get_doc("File", {"file_url": html_template_data.image_4})
 		assests = {
-			"image_1": "file:///" + os.path.realpath(file_image_1.get_full_path()),
-			"image_2": "file:///" + os.path.realpath(file_image_2.get_full_path()),
-			"image_3": "file:///" + os.path.realpath(file_image_3.get_full_path()),
-			"image_4": "file:///" + os.path.realpath(file_image_4.get_full_path()),
+			"pdf_image_1": "file:///" + os.path.realpath(file_image_1.get_full_path()),
+			"pdf_image_2": "file:///" + os.path.realpath(file_image_2.get_full_path()),
+			"pdf_image_3": "file:///" + os.path.realpath(file_image_3.get_full_path()),
+			"pdf_image_4": "file:///" + os.path.realpath(file_image_4.get_full_path()),
 		}
 		zip_buffer = generate_and_zip_pdfs(file.get_full_path(), html_template_data, assests)
 		saved_file = self.save_file(zip_buffer.getvalue())
@@ -48,22 +48,10 @@ class GeneratePDF(Document):
 
 def generate_and_encrypt_pdf(html_template, row, password):
 	
-	html_content = []
-	temp = Template(html_template.pdf_html_template).render(row)
-	html_content.append(temp)
-	print(temp)
-	
-	# check for page 2 
-	if html_template.pdf_html_template_page_2:
-		html_content.append(Template(html_template.pdf_html_template_page_2).render(row))
-	
-
-	# chaeck for page 3
-	if html_template.pdf_html_template_page_3:
-		html_content.append(Template(html_template.pdf_html_template_page_3).render(row))
+	html_content = Template(html_template.pdf_html_template).render(row)
 
 	options = {'page-size': 'A4', 'enable-local-file-access': ''}
-	pdf_content = pdfkit.from_string('<div style="page-break-after: always;"></div>'.join(html_content), False, options=options)
+	pdf_content = pdfkit.from_string(html_content, False, options=options)
 
 	# Encrypt PDF with the provided password
 	pdf_reader = PyPDF2.PdfReader(io.BytesIO(pdf_content))

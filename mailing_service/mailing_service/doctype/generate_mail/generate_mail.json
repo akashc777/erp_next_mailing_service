@@ -8,11 +8,12 @@
   "select_email_template",
   "select_pdf_template",
   "upload_csv",
+  "email_acc",
+  "send_mail",
   "column_break_riih",
   "row_num",
   "get_email_preview",
-  "get_pdf_preview",
-  "send_mail"
+  "get_pdf_preview"
  ],
  "fields": [
   {
@@ -36,7 +37,7 @@
   {
    "fieldname": "send_mail",
    "fieldtype": "Button",
-   "label": "Send mail"
+   "label": "Add mail as draft"
   },
   {
    "fieldname": "get_pdf_preview",
@@ -57,11 +58,17 @@
    "fieldname": "get_email_preview",
    "fieldtype": "Button",
    "label": "Get email preview"
+  },
+  {
+   "fieldname": "email_acc",
+   "fieldtype": "Link",
+   "label": "select email account",
+   "options": "Email Account"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-16 12:53:28.457515",
+ "modified": "2024-01-25 01:16:07.921712",
  "modified_by": "Administrator",
  "module": "Mailing Service",
  "name": "Generate Mail",

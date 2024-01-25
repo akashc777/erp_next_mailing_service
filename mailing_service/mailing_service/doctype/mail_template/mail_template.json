@@ -6,6 +6,7 @@
  "engine": "InnoDB",
  "field_order": [
   "email_template_name",
+  "subject",
   "email_html_template",
   "column_break_hlgd",
   "image_1",
@@ -22,8 +23,8 @@
   },
   {
    "fieldname": "email_html_template",
-   "fieldtype": "Code",
-   "label": "Email HTML template"
+   "fieldtype": "HTML Editor",
+   "label": "Email HTML template body"
   },
   {
    "fieldname": "column_break_hlgd",
@@ -48,11 +49,16 @@
    "fieldname": "image_4",
    "fieldtype": "Attach Image",
    "label": "image 4"
+  },
+  {
+   "fieldname": "subject",
+   "fieldtype": "Data",
+   "label": "subject"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-01-16 10:56:02.635881",
+ "modified": "2024-01-25 03:43:11.079796",
  "modified_by": "Administrator",
  "module": "Mailing Service",
  "name": "Mail Template",
