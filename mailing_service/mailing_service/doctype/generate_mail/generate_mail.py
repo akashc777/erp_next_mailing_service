@@ -110,14 +110,16 @@ class GenerateMail(Document):
 		if self.html_pdf_template_data.pdf_html_footer:
 			pdf_html_footer = Template(self.html_pdf_template_data.pdf_html_footer).render(row)
 
-		# with tempfile.NamedTemporaryFile(mode='w+', delete=True) as header_file:
-		# 	header_html = '<div style="text-align: center; font-size: 12px; color: #333;">This is the header</div>'
-		# 	header_file.write(header_html)
+		with tempfile.NamedTemporaryFile(mode='w+', delete=True) as header_file:
+			header_html = '<div style="text-align: center; font-size: 12px; color: #333;">This is the header</div>'
+			header_file.write(header_html)
 
 		password = row.get('password', '')
 		options = {
 			'page-size': 'A4', 
 			'enable-local-file-access': '',
+			'header-html': header_html,
+			'footer-html': pdf_html_footer, 
 
 		}
 		pdf_content = pdfkit.from_string(pdf_html,  False, options=options)
